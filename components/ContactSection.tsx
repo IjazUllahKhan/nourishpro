@@ -1,50 +1,41 @@
 "use client";
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { siteData } from "@/data/siteData";
 
 export default function ContactSection() {
   return (
     <section id="contact" className="py-20 px-4 bg-white">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-4xl text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12"
+          className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
         >
-          {siteData.contact.title}
+          Ready to Partner With Nourish Pro?
         </motion.h2>
-        <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center gap-3 text-gray-700"
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto"
+        >
+          Connect with our team to explore franchise opportunities, real estate partnerships, foundation initiatives, or general inquiries.
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <Link
+            href="/contact"
+            className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
           >
-            <Mail className="w-6 h-6 text-orange-500" />
-            <span className="text-lg">{siteData.contact.email}</span>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="flex items-center gap-3 text-gray-700"
-          >
-            <Phone className="w-6 h-6 text-orange-500" />
-            <span className="text-lg">{siteData.contact.phone}</span>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex items-center gap-3 text-gray-700"
-          >
-            <MapPin className="w-6 h-6 text-orange-500" />
-            <span className="text-lg">{siteData.contact.address}</span>
-          </motion.div>
-        </div>
+            Contact Our Team
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

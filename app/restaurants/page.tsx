@@ -216,7 +216,7 @@ export default function RestaurantsPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Link
-              href="/#contact"
+              href="/contact"
               className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
             >
               Start a Franchise Inquiry
