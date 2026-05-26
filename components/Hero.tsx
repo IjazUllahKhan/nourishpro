@@ -29,9 +29,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-xl md:text-2xl text-white max-w-2xl"
+          className="text-xl md:text-2xl text-white max-w-3xl mb-6"
         >
-          {siteData.hero.subtitle}
+          A multi-brand ecosystem built for growth — connecting restaurants, real estate opportunities, and community impact under one vision.
         </motion.p>
       </div>
     </section>

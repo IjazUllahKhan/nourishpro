@@ -7,7 +7,7 @@ import { siteData } from "@/data/siteData";
 
 export default function CategorySlides() {
   return (
-    <section className="py-20 px-4 bg-navy-950">
+    <section className="py-20 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {siteData.categories.map((category, index) => (

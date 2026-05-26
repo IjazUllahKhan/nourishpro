@@ -15,7 +15,7 @@ export default function Navbar() {
     { href: "/restaurants", label: "Restaurants" },
     { href: "/real-estate", label: "Real Estate" },
     { href: "/foundation", label: "Foundation" },
-    { href: "/#contact", label: "Contact" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const isActive = (href: string) => {
