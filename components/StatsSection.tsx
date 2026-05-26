@@ -20,7 +20,7 @@ export default function StatsSection() {
             A growing multi-brand platform built around restaurant operations, franchise support, and community-focused growth.
           </p>
         </motion.div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {siteData.stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -29,7 +29,7 @@ export default function StatsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-5xl font-bold text-orange-500 mb-2">{stat.value}</div>
+              <div className="text-4xl sm:text-5xl lg:text-5xl font-bold text-orange-500 mb-2 break-words lg:break-normal leading-tight">{stat.value}</div>
               <div className="text-gray-900 font-semibold text-lg mb-1">{stat.label}</div>
               <div className="text-gray-600 text-sm">{stat.description}</div>
             </motion.div>

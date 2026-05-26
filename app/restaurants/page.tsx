@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 import { siteData } from "@/data/siteData";
 
 const restaurantConcepts = [
-  { name: "Coco Frutti", description: "Fresh fruit-focused concepts serving nutritious options" },
-  { name: "Coco Loco", description: "Creative beverage and snack offerings" },
-  { name: "Shack Attakk", description: "Casual dining with bold flavors" },
-  { name: "L'Oeuf Doré", description: "Breakfast and brunch specialists" },
-  { name: "Breakfast Club", description: "Morning meal destination with variety" },
-  { name: "Réveil Matin", description: "Traditional breakfast favorites" },
+  { name: "Coco Frutti", description: "Fresh fruit-focused concepts serving nutritious options", color: "bg-orange-100 text-orange-600" },
+  { name: "Coco Loco", description: "Creative beverage and snack offerings", color: "bg-yellow-100 text-yellow-700" },
+  { name: "Shack Attakk", description: "Casual dining with bold flavors", color: "bg-red-100 text-red-600" },
+  { name: "L'Oeuf Doré", description: "Breakfast and brunch specialists", color: "bg-amber-100 text-amber-700" },
+  { name: "Breakfast Club", description: "Morning meal destination with variety", color: "bg-blue-100 text-blue-600" },
+  { name: "Réveil Matin", description: "Traditional breakfast favorites", color: "bg-indigo-100 text-indigo-600" },
 ];
 
 const franchiseSupport = [
@@ -104,21 +104,30 @@ export default function RestaurantsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-bold text-gray-900 text-center mb-12"
+            className="text-4xl font-bold text-gray-900 text-center mb-4"
           >
-            Our Restaurant Concepts
+            Our Brands
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg text-gray-600 text-center mb-12"
+          >
+            With over 60 restaurants across Quebec and Ontario.
+          </motion.p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
             {restaurantConcepts.map((concept, index) => (
               <motion.div
                 key={concept.name}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 text-center shadow-lg"
+                className="text-center"
               >
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">{concept.name}</h3>
-                <p className="text-gray-600 mb-4">{concept.description}</p>
+                <div className={`w-24 h-24 sm:w-28 sm:h-28 lg:w-28 lg:h-28 mx-auto mb-3 rounded-full flex items-center justify-center ${concept.color} shadow-md`}>
+                  <span className="text-xs font-bold text-center px-1 leading-tight">{concept.name}</span>
+                </div>
               </motion.div>
             ))}
           </div>
