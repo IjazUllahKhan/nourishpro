@@ -132,6 +132,7 @@ export default function FoundationPage() {
         title="Community in Action"
         subtitle="A closer look at the people, programmes, and community moments behind the Nourish Foundation."
         slides={foundationCarouselSlides}
+        accentColor="emerald"
       />
 
       {/* Programme Cards */}
@@ -154,8 +155,8 @@ export default function FoundationPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-6 text-center shadow-lg"
               >
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <programme.icon className="w-8 h-8 text-orange-500" />
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <programme.icon className="w-8 h-8 text-emerald-500" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{programme.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{programme.description}</p>
@@ -185,7 +186,7 @@ export default function FoundationPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <statement.icon className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-gray-300 text-sm">{statement.text}</p>
@@ -221,7 +222,7 @@ export default function FoundationPage() {
           >
             <Link
               href="/contact"
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+              className="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
             >
               Connect with Us
             </Link>

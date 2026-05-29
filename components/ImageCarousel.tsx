@@ -17,9 +17,16 @@ interface ImageCarouselProps {
   title: string;
   subtitle?: string;
   slides: CarouselSlide[];
+  accentColor?: "orange" | "amber" | "emerald";
 }
 
-export default function ImageCarousel({ title, subtitle, slides }: ImageCarouselProps) {
+export default function ImageCarousel({ title, subtitle, slides, accentColor = "orange" }: ImageCarouselProps) {
+  const accentClasses = {
+    orange: { active: "bg-orange-500", hover: "hover:bg-orange-600" },
+    amber: { active: "bg-amber-500", hover: "hover:bg-amber-600" },
+    emerald: { active: "bg-emerald-500", hover: "hover:bg-emerald-600" },
+  };
+  const accent = accentClasses[accentColor];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -116,7 +123,7 @@ export default function ImageCarousel({ title, subtitle, slides }: ImageCarousel
                 aria-label={`Go to slide ${index + 1}`}
                 className={`transition-all ${
                   index === currentIndex
-                    ? "w-8 h-3 bg-orange-500 rounded-full"
+                    ? `w-8 h-3 ${accent.active} rounded-full`
                     : "w-3 h-3 bg-gray-300 border border-gray-400 rounded-full hover:bg-gray-400"
                 }`}
               />

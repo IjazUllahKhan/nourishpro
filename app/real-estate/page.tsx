@@ -124,6 +124,7 @@ export default function RealEstatePage() {
         title="Property & Development Highlights"
         subtitle="A visual look at the spaces, planning, and development opportunities that support Nourish Pro's growth."
         slides={realEstateCarouselSlides}
+        accentColor="amber"
       />
 
       {/* Capabilities Section */}
@@ -146,8 +147,8 @@ export default function RealEstatePage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-6 text-center shadow-lg"
               >
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <capability.icon className="w-8 h-8 text-orange-500" />
+                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <capability.icon className="w-8 h-8 text-amber-500" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{capability.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{capability.description}</p>
@@ -236,7 +237,7 @@ export default function RealEstatePage() {
           >
             <Link
               href="/contact"
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
+              className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
             >
               Contact Our Team
             </Link>
