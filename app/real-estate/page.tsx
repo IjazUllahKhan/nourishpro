@@ -5,6 +5,25 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { siteData } from "@/data/siteData";
 import { Building2, BarChart3, Handshake, Zap } from "lucide-react";
+import ImageCarousel from "@/components/ImageCarousel";
+
+const realEstateCarouselSlides = [
+  {
+    image: "/images/carousels/real-estate/real-estate-exterior.jpg",
+    title: "Strategic Properties",
+    description: "Commercial and hospitality-focused spaces aligned with long-term ecosystem growth.",
+  },
+  {
+    image: "/images/carousels/real-estate/real-estate-lobby.jpg",
+    title: "Hospitality Interiors",
+    description: "Guest-facing environments designed for comfort, quality, and operational value.",
+  },
+  {
+    image: "/images/carousels/real-estate/real-estate-development.jpg",
+    title: "Development Planning",
+    description: "Site strategy, development planning, and partnership opportunities built around growth.",
+  },
+];
 
 const capabilities = [
   {
@@ -99,6 +118,13 @@ export default function RealEstatePage() {
           </motion.p>
         </div>
       </section>
+
+      {/* Property Highlights Carousel */}
+      <ImageCarousel
+        title="Property & Development Highlights"
+        subtitle="A visual look at the spaces, planning, and development opportunities that support Nourish Pro's growth."
+        slides={realEstateCarouselSlides}
+      />
 
       {/* Capabilities Section */}
       <section className="py-20 px-4 bg-gray-50">

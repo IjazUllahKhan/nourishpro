@@ -4,14 +4,33 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { siteData } from "@/data/siteData";
+import ImageCarousel from "@/components/ImageCarousel";
+
+const restaurantsCarouselSlides = [
+  {
+    image: "/images/carousels/restaurants/restaurant-dining.jpg",
+    title: "Dining Atmosphere",
+    description: "Warm, premium dining spaces designed around memorable guest experiences.",
+  },
+  {
+    image: "/images/carousels/restaurants/restaurant-team.jpg",
+    title: "Restaurant Team",
+    description: "People-focused operations supported by training, service standards, and brand culture.",
+  },
+  {
+    image: "/images/carousels/restaurants/restaurant-kitchen.jpg",
+    title: "Kitchen Operations",
+    description: "Fresh preparation, consistent systems, and operational support for restaurant growth.",
+  },
+];
 
 const restaurantConcepts = [
-  { name: "Coco Frutti", description: "Fresh fruit-focused concepts serving nutritious options", color: "bg-orange-100 text-orange-600" },
-  { name: "Coco Loco", description: "Creative beverage and snack offerings", color: "bg-yellow-100 text-yellow-700" },
-  { name: "Shack Attakk", description: "Casual dining with bold flavors", color: "bg-red-100 text-red-600" },
-  { name: "L'Oeuf Doré", description: "Breakfast and brunch specialists", color: "bg-amber-100 text-amber-700" },
-  { name: "Breakfast Club", description: "Morning meal destination with variety", color: "bg-blue-100 text-blue-600" },
-  { name: "Réveil Matin", description: "Traditional breakfast favorites", color: "bg-indigo-100 text-indigo-600" },
+  { name: "Coco Frutti", logo: "/images/brands/coco-frutti.png", color: "bg-pink-50" },
+  { name: "Coco Loco", logo: "/images/brands/coco-loco.png", color: "bg-lime-50" },
+  { name: "Shack Attakk", logo: "/images/brands/shack-attakk.png", color: "bg-cyan-500" },
+  { name: "L'Oeuf Doré", logo: "/images/brands/loeuf-dore.png", color: "bg-slate-800" },
+  { name: "Breakfast Club", logo: "/images/brands/resto-logo.png", color: "bg-blue-600" },
+  { name: "Réveil Matin", logo: "/images/brands/reveil-matin.png", color: "bg-amber-100" },
 ];
 
 const franchiseSupport = [
@@ -97,7 +116,14 @@ export default function RestaurantsPage() {
         </div>
       </section>
 
-      {/* Our Restaurant Concepts */}
+      {/* Restaurant Experiences Carousel */}
+      <ImageCarousel
+        title="Restaurant Experiences"
+        subtitle="A look inside the dining spaces, teams, and operations behind the Nourish Pro restaurant platform."
+        slides={restaurantsCarouselSlides}
+      />
+
+      {/* Our Brands */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <motion.h2
@@ -116,20 +142,46 @@ export default function RestaurantsPage() {
           >
             With over 60 restaurants across Quebec and Ontario.
           </motion.p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
-            {restaurantConcepts.map((concept, index) => (
-              <motion.div
-                key={concept.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className={`w-24 h-24 sm:w-28 sm:h-28 lg:w-28 lg:h-28 mx-auto mb-3 rounded-full flex items-center justify-center ${concept.color} shadow-md`}>
-                  <span className="text-xs font-bold text-center px-1 leading-tight">{concept.name}</span>
+          <div className="flex flex-col items-center">
+            {/* Brand logos row */}
+            <div className="flex flex-wrap justify-center gap-8 mb-6">
+              {restaurantConcepts.map((concept, index) => (
+                <motion.div
+                  key={concept.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className={`w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 rounded-full flex items-center justify-center ${concept.color} shadow-lg overflow-hidden`}>
+                    <div className="relative w-full h-full p-4">
+                      <Image
+                        src={concept.logo}
+                        alt={concept.name}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 640px) 128px, 160px"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            {/* Own a Franchise Tile */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: restaurantConcepts.length * 0.1 }}
+              className="text-center"
+            >
+              <Link href="/#contact" className="block">
+                <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 rounded-full flex items-center justify-center bg-orange-500 shadow-lg hover:shadow-xl transition-shadow">
+                  <span className="text-white font-bold text-center px-2 leading-tight text-sm sm:text-base">
+                    OWN A FRANCHISE
+                  </span>
                 </div>
-              </motion.div>
-            ))}
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -225,7 +277,7 @@ export default function RestaurantsPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Link
-              href="/contact"
+              href="/#contact"
               className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg"
             >
               Start a Franchise Inquiry

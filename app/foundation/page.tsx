@@ -5,6 +5,25 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { siteData } from "@/data/siteData";
 import { Heart, GraduationCap, UtensilsCrossed, Leaf, Users, Handshake, Globe, Activity } from "lucide-react";
+import ImageCarousel from "@/components/ImageCarousel";
+
+const foundationCarouselSlides = [
+  {
+    image: "/images/carousels/foundation/foundation-community.jpg",
+    title: "Community Support",
+    description: "Supporting local families and neighbourhoods through community-focused initiatives.",
+  },
+  {
+    image: "/images/carousels/foundation/foundation-youth.jpg",
+    title: "Youth & Education",
+    description: "Encouraging young people through learning, mentorship, and opportunity.",
+  },
+  {
+    image: "/images/carousels/foundation/foundation-food-support.jpg",
+    title: "Food Support",
+    description: "Helping strengthen communities through nourishment, care, and practical support.",
+  },
+];
 
 const programmes = [
   {
@@ -107,6 +126,13 @@ export default function FoundationPage() {
           </motion.p>
         </div>
       </section>
+
+      {/* Community in Action Carousel */}
+      <ImageCarousel
+        title="Community in Action"
+        subtitle="A closer look at the people, programmes, and community moments behind the Nourish Foundation."
+        slides={foundationCarouselSlides}
+      />
 
       {/* Programme Cards */}
       <section className="py-20 px-4 bg-gray-50">
