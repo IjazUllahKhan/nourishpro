@@ -52,18 +52,22 @@ const portfolioHighlights = [
   {
     title: "Hospitality Development",
     description: "Restaurant and hospitality properties designed to create memorable guest experiences while supporting franchise growth and community engagement.",
+    image: "/images/carousels/real-estate/real-estate-exterior.jpg",
   },
   {
     title: "Commercial Property",
     description: "Strategic commercial locations that serve as anchors for our restaurant concepts and provide long-term value for partners and investors.",
+    image: "/images/carousels/real-estate/real-estate-lobby.jpg",
   },
   {
     title: "Mixed-Use Project",
     description: "Integrated developments combining dining, retail and community spaces to create vibrant destinations that drive traffic and engagement.",
+    image: "/images/carousels/real-estate/real-estate-development.jpg",
   },
   {
     title: "Community-Focused Site",
     description: "Properties selected for their potential to strengthen neighbourhoods and provide meaningful gathering places for local communities.",
+    image: "/images/carousels/real-estate/real-estate-exterior.jpg",
   },
 ];
 
@@ -102,7 +106,8 @@ export default function RealEstatePage() {
         <div className="container mx-auto max-w-4xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-gray-900 text-center mb-8"
           >
@@ -110,7 +115,8 @@ export default function RealEstatePage() {
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-600 leading-relaxed text-center"
           >
@@ -132,7 +138,8 @@ export default function RealEstatePage() {
         <div className="container mx-auto max-w-6xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-gray-900 text-center mb-12"
           >
@@ -143,7 +150,8 @@ export default function RealEstatePage() {
               <motion.div
                 key={capability.title}
                 initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-6 text-center shadow-lg"
               >
@@ -163,7 +171,8 @@ export default function RealEstatePage() {
         <div className="container mx-auto max-w-6xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-gray-900 text-center mb-12"
           >
@@ -174,12 +183,13 @@ export default function RealEstatePage() {
               <motion.div
                 key={highlight.title}
                 initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gray-50 rounded-xl p-6 text-center"
               >
                 <div className="relative h-40 w-full mb-4 rounded-lg overflow-hidden">
-                  <Image src={category.image} alt={highlight.title} fill className="object-cover" />
+                  <Image src={highlight.image} alt={highlight.title} fill className="object-cover" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{highlight.title}</h3>
                 <p className="text-gray-600 text-sm">{highlight.description}</p>
@@ -194,7 +204,8 @@ export default function RealEstatePage() {
         <div className="container mx-auto max-w-4xl text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-white mb-8"
           >
@@ -202,7 +213,8 @@ export default function RealEstatePage() {
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-300 leading-relaxed"
           >
@@ -216,7 +228,8 @@ export default function RealEstatePage() {
         <div className="container mx-auto max-w-4xl text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-gray-900 mb-6"
           >
@@ -224,7 +237,8 @@ export default function RealEstatePage() {
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto"
           >
@@ -232,7 +246,8 @@ export default function RealEstatePage() {
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Link

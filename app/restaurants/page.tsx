@@ -99,7 +99,8 @@ export default function RestaurantsPage() {
         <div className="container mx-auto max-w-4xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-gray-900 text-center mb-8"
           >
@@ -107,7 +108,8 @@ export default function RestaurantsPage() {
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-600 leading-relaxed text-center"
           >
@@ -128,7 +130,8 @@ export default function RestaurantsPage() {
         <div className="container mx-auto max-w-6xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-gray-900 text-center mb-4"
           >
@@ -136,7 +139,8 @@ export default function RestaurantsPage() {
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-600 text-center mb-12"
           >
@@ -149,7 +153,8 @@ export default function RestaurantsPage() {
                 <motion.div
                   key={concept.name}
                   initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="text-center"
                 >
@@ -170,7 +175,8 @@ export default function RestaurantsPage() {
             {/* Own a Franchise Tile */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: restaurantConcepts.length * 0.1 }}
               className="text-center"
             >
@@ -191,7 +197,8 @@ export default function RestaurantsPage() {
         <div className="container mx-auto max-w-6xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-gray-900 text-center mb-12"
           >
@@ -202,7 +209,8 @@ export default function RestaurantsPage() {
               <motion.div
                 key={support.title}
                 initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gray-50 rounded-xl p-6 text-center"
               >
@@ -219,7 +227,8 @@ export default function RestaurantsPage() {
         <div className="container mx-auto max-w-6xl">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-gray-900 text-center mb-4"
           >
@@ -227,7 +236,8 @@ export default function RestaurantsPage() {
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-600 text-center mb-12 max-w-3xl mx-auto"
           >
@@ -238,7 +248,8 @@ export default function RestaurantsPage() {
               <motion.div
                 key={step.number}
                 initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gray-800 rounded-xl p-6 text-center"
               >
@@ -257,7 +268,8 @@ export default function RestaurantsPage() {
         <div className="container mx-auto max-w-4xl text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold text-gray-900 mb-6"
           >
@@ -265,7 +277,8 @@ export default function RestaurantsPage() {
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto"
           >
@@ -273,7 +286,8 @@ export default function RestaurantsPage() {
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Link
